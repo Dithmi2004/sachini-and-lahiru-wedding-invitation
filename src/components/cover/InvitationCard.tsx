@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { useLanguage } from "../../contexts/LanguageContext";
 import { wedding } from "../../data/wedding";
 import { formatWeddingDate } from "../../utils/datetime";
@@ -12,9 +12,6 @@ interface InvitationCardProps {
 /** White-to-blush invitation card with a gold mandala crown and watercolor lotus border. */
 export function InvitationCard({ opening, onOpen }: InvitationCardProps) {
   const { t, locale } = useLanguage();
-  const joiner = locale === "en" ? " & " : " සහ ";
-  const brideParents = `${wedding.brideParents.father[locale]}${joiner}${wedding.brideParents.mother[locale]}`;
-  const groomParents = `${wedding.groomParents.father[locale]}${joiner}${wedding.groomParents.mother[locale]}`;
 
   return (
     <article
@@ -35,11 +32,9 @@ export function InvitationCard({ opening, onOpen }: InvitationCardProps) {
       <div className="relative px-7 pt-4 text-center sm:px-9">
         <p className="caps text-[10px] font-semibold leading-relaxed text-rosewood/80">{t.cover.blessing}</p>
 
-        <p className="mt-3 text-[17px] font-medium leading-snug text-rosewood">{brideParents}</p>
 
         <div aria-hidden="true" className="mx-auto mt-4 border-t-2 border-dotted border-rosewood/70" />
 
-        <p className="mt-2 text-[15px] leading-snug text-rosewood">{t.cover.requestDaughter}</p>
         <p className="mt-2 font-script text-[clamp(2.1rem,9.5vw,2.75rem)] leading-tight text-foil">
           {wedding.bride.name}
         </p>
@@ -48,8 +43,6 @@ export function InvitationCard({ opening, onOpen }: InvitationCardProps) {
           {t.cover.and}
         </p>
 
-        <p className="text-[15px] font-medium leading-snug text-rosewood">{groomParents}</p>
-        <p className="italic-en mt-1 text-[14px] leading-snug text-rosewood/90">{t.cover.requestSon}</p>
         <p className="mt-2 font-script text-[clamp(2.1rem,9.5vw,2.75rem)] leading-tight text-foil">
           {wedding.groom.name}
         </p>

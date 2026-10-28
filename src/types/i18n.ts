@@ -5,6 +5,26 @@ export interface RsvpMessageParams {
   venue: string;
 }
 
+export interface FamilyInvitationParams {
+  bride: string;
+  groom: string;
+  brideFather: string;
+  brideMother: string;
+  groomFather: string;
+  groomMother: string;
+}
+
+export interface FamilyInvitationCopy {
+  opening: string;
+  brideParents: string;
+  brideLead: string;
+  connector: string;
+  groomParents: string;
+  groomLead: string;
+  groomSuffix: string;
+  closing: string;
+}
+
 export interface Translation {
   languageName: string;
   language: {label: string;};
@@ -29,7 +49,7 @@ export interface Translation {
   };
   family: {
     title: string;
-    message: (bride: string, groom: string) => string;
+    invitation: (names: FamilyInvitationParams) => FamilyInvitationCopy;
     bridesFamily: string;
     groomsFamily: string;
     daughterOf: string;

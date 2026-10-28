@@ -26,7 +26,7 @@ export function ActionLink({
 }: ActionLinkProps) {
   return <a href={href} target="_blank" rel="noopener noreferrer" className={twMerge(base, variants[variant], className)}>
       <Icon className="h-5 w-5 shrink-0" strokeWidth={1.6} aria-hidden="true" />
-      <span>{children}</span>
+      <span className="min-w-0">{children}</span>
       <span className="sr-only"> ({newTabLabel})</span>
     </a>;
 }

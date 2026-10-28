@@ -31,11 +31,34 @@ html[lang='si'] .font-serif {
   line-height: 1.4;
   letter-spacing: 0;
 }
+html[lang='si'] h2 {
+  font-size: clamp(1.75rem, 7vw, 2.75rem);
+  line-height: 1.45;
+}
+html[lang='si'] .text-2xl { font-size: 1.35rem; line-height: 1.75; }
+html[lang='si'] .text-xl { font-size: 1.1rem; line-height: 1.85; }
+html[lang='si'] .text-lg { font-size: 1rem; line-height: 1.8; }
+html[lang='si'] .family-invitation-message {
+  font-size: clamp(1.05rem, 3.8vw, 1.25rem);
+  line-height: 1.85;
+}
 html[lang='si'] .font-sinhala {
   font-family: 'Noto Sans Sinhala', 'Noto Serif Sinhala', sans-serif;
 }
 html[lang='si'] .caps {
   letter-spacing: 0;
+}
+html[lang='si'] .rsvp-button-frame {
+  max-width: 100%;
+}
+html[lang='si'] .rsvp-button-frame a {
+  max-width: calc(100vw - 3rem);
+  min-height: 48px;
+  padding-inline: 1.1rem;
+  white-space: normal;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 /* Handmade-paper texture (SVG noise, no gradients) */
 .paper {

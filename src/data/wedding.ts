@@ -49,7 +49,7 @@ export const wedding: WeddingConfig = {
     mapsQuery: "Royal Chance Palace, Kalagedihena, Sri Lanka"
   },
   contact: {
-    whatsappNumber: "+94778170657"
+    whatsappNumber: "+94764991398"
   },
   schedule: [
   { id: "arrival", time: "09:30", title: { en: "Guest arrival", si: "ආරාධිතයින් පැමිණීම" } },

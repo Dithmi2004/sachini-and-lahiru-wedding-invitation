@@ -37,7 +37,9 @@ export function FamilyColumn({ label, name, relation, parents, locale, side }: F
         <div className="relative flex flex-col items-center">
           <LotusEmblem className="h-7 w-11 text-foil" />
           <h3 className="caps mt-4 text-xs font-bold text-rosewood">{label}</h3>
-          <p className="mt-3 font-script text-[2.6rem] leading-tight text-maroon lg:text-5xl">{name}</p>
+          <p className={`mt-3 text-maroon ${locale === "si" ? "font-serif text-[1.45rem] font-semibold leading-relaxed sm:text-[1.65rem] lg:text-[1.8rem]" : "font-script text-[2.6rem] leading-tight lg:text-5xl"}`}>
+            {name}
+          </p>
           <GoldDivider className="mt-4 text-foil" />
           <p className="italic-en mt-5 text-lg text-cocoa-soft">{relation}</p>
           <p className="mt-2 text-xl font-semibold text-cocoa sm:text-[1.4rem]">{parents.father[locale]}</p>

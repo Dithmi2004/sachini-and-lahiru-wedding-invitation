@@ -1,4 +1,4 @@
-import type { Translation } from "../types/i18n";
+﻿import type { Translation } from "../types/i18n";
 import type { Locale } from "../types/wedding";
 
 const en: Translation = {
@@ -15,9 +15,9 @@ const en: Translation = {
   },
   cover: {
     dialogLabel: "Wedding invitation of Sachini and Lahiru",
-    blessing: "With the blessings of their beloved parents",
-    requestDaughter: "request the pleasure of your company at the wedding of their daughter",
-    requestSon: "request the pleasure of your company at the wedding of their son",
+    blessing: "With love and blessings from their families",
+    requestDaughter: "Request the pleasure of your company at the wedding of their daughter",
+    requestSon: "Request the pleasure of your company at the wedding of their son",
     and: "&",
     tapToOpen: "Tap to open",
     openLabel: "Open the wedding invitation"
@@ -29,8 +29,16 @@ const en: Translation = {
   },
   family: {
     title: "Our families",
-    message: (bride, groom) =>
-    `With the blessings of their beloved parents, ${bride} and ${groom} joyfully invite you to celebrate their wedding and the beginning of their new journey together.`,
+    invitation: ({ bride, groom, brideFather, brideMother, groomFather, groomMother }) => ({
+      opening: "With the blessings of their beloved parents,",
+      brideParents: `${brideFather} and ${brideMother},`,
+      brideLead: "we cordially invite you to celebrate the wedding of their beloved daughter,",
+      connector: "and",
+      groomParents: `${groomFather} and ${groomMother},`,
+      groomLead: "who joyfully invite you to celebrate the marriage of their beloved son,",
+      groomSuffix: ".",
+      closing: "Your presence and blessings will make this auspicious occasion even more memorable."
+    }),
     bridesFamily: "The Bride's Family",
     groomsFamily: "The Groom's Family",
     daughterOf: "Daughter of",
@@ -109,7 +117,7 @@ const si: Translation = {
   },
   cover: {
     dialogLabel: "සචිනි සහ ලහිරුගේ මංගල ආරාධනාව",
-    blessing: "ආදරණීය දෙමාපියන්ගේ ආශීර්වාදයෙන්",
+    blessing: "පවුල්වල ආදරය සහ ආශීර්වාදය සමඟ",
     requestDaughter: "තම දියණියගේ විවාහ මංගලෝත්සවයට ඔබගේ පැමිණීම ගෞරවයෙන් අපේක්ෂා කරති",
     requestSon: "තම පුත්‍රයාගේ විවාහ මංගලෝත්සවයට ඔබගේ පැමිණීම ගෞරවයෙන් අපේක්ෂා කරති",
     and: "&",
@@ -123,8 +131,16 @@ const si: Translation = {
   },
   family: {
     title: "අපගේ පවුල්",
-    message: (bride, groom) =>
-    `ආදරණීය දෙමාපියන්ගේ ආශීර්වාදය ඇතිව, ${bride} සහ ${groom} තම විවාහ මංගල්‍යය සහ එක්ව ආරම්භ කරන නව ජීවන ගමන සැමරීමට ඔබට සතුටින් ආරාධනා කරති.`,
+    invitation: ({ brideFather, brideMother, groomFather, groomMother }) => ({
+      opening: "",
+      brideParents: `${brideFather}ගේ සහ ${brideMother}ගේ ආදරණීය දියණිය වන`,
+      brideLead: "",
+      connector: "සහ",
+      groomParents: `${groomFather}ගේ සහ ${groomMother}ගේ ආදරණීය පුත්‍රයා වන`,
+      groomLead: "",
+      groomSuffix: "",
+      closing: "යන දෙදෙනාගේ අතිනත ගැනීමේ මංගල උත්සවය නිමිත්තෙන් පැවැත්වෙන මෙම සුභ මොහොතට සහභාගී වී, ඔබගේ ආදරය හා ආශිර්වාදය එක් කරන ලෙස ගෞරවයෙන් ආරාධනා කර සිටිමු."
+    }),
     bridesFamily: "මනාලියගේ පවුල",
     groomsFamily: "මනාලයාගේ පවුල",
     daughterOf: "ආදරණීය දෙමාපියන්",
