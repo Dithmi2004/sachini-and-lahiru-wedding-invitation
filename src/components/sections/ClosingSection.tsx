@@ -7,9 +7,11 @@ import { LotusEmblem } from "../ornaments/LotusEmblem";
 import { OilLamp } from "../ornaments/OilLamp";
 
 export function ClosingSection() {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
   const reduceMotion = useReducedMotion();
-  const signature = `${wedding.bride.name.split(" ")[0]} & ${wedding.groom.name.split(" ")[0]}`;
+  const signature = locale === "si"
+    ? `${wedding.bride.firstName.si} සහ ${wedding.groom.firstName.si}`
+    : `${wedding.bride.firstName.en} & ${wedding.groom.firstName.en}`;
   return (
     <section aria-labelledby="closing-title" className="px-5 pb-6 pt-20 text-center sm:px-8 lg:pt-28">
       <h2 id="closing-title" className="sr-only">
@@ -35,7 +37,9 @@ export function ClosingSection() {
         <p className="italic-en mt-10 text-2xl leading-relaxed text-cocoa sm:text-3xl">{t.closing.message}</p>
         <GoldDivider className="mt-9" />
         <p className="italic-en mt-7 text-xl text-cocoa-soft">{t.closing.withLove}</p>
-        <p className="mt-2 font-script text-5xl text-maroon sm:text-6xl">{signature}</p>
+        <p className={`mt-2 text-maroon ${locale === "si" ? "font-serif text-2xl font-medium leading-relaxed sm:text-3xl" : "font-script text-5xl sm:text-6xl"}`}>
+          {signature}
+        </p>
       </motion.div>
     </section>);
 

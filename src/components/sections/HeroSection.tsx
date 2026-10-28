@@ -51,11 +51,11 @@ export function HeroSection() {
 
           <h1
             id="hero-title"
-            className="mt-5 font-script text-[clamp(2.6rem,5.4vw,4.4rem)] font-normal leading-[1.12] text-maroon">
+            className={`mt-5 text-maroon ${locale === "si" ? "font-serif text-[clamp(1.9rem,5vw,3rem)] font-semibold leading-[1.5]" : "font-script text-[clamp(2.6rem,5.4vw,4.4rem)] font-normal leading-[1.12]"}`}>
             
-            <span className="block">{wedding.bride.name}</span>
+            <span className="block">{wedding.bride.fullName[locale]}</span>
             <span className="my-1 block text-[0.62em] text-foil">&amp;</span>
-            <span className="block">{wedding.groom.name}</span>
+            <span className="block">{wedding.groom.fullName[locale]}</span>
           </h1>
 
           <GoldDivider className="mt-7 text-foil" />

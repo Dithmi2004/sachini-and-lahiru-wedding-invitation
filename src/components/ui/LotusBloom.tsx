@@ -23,10 +23,12 @@ const PETALS = [
 { angle: 0, d: PETAL, fill: "#FBD9E2", delay: 0.18 }];
 
 
-const signature = `${wedding.bride.name.split(" ")[0]} & ${wedding.groom.name.split(" ")[0]}`;
-
 /** Full-screen "awakening lotus" transition between the cover and the wedding page. */
 export function LotusBloom({ onRevealed, onDone }: LotusBloomProps) {
+  const { locale } = useLanguage();
+  const signature = locale === "si"
+    ? `${wedding.bride.firstName.si} සහ ${wedding.groom.firstName.si}`
+    : `${wedding.bride.firstName.en} & ${wedding.groom.firstName.en}`;
   useEffect(() => {
     const reveal = window.setTimeout(onRevealed, 1050);
     const done = window.setTimeout(onDone, 1250);
@@ -91,7 +93,7 @@ export function LotusBloom({ onRevealed, onDone }: LotusBloomProps) {
         </svg>
 
         <motion.p
-          className="mt-4 font-script text-4xl text-foil sm:text-5xl"
+          className={`mt-4 text-foil ${locale === "si" ? "font-serif text-2xl sm:text-3xl" : "font-script text-4xl sm:text-5xl"}`}
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 0.6, ease: EASE_OUT }}>

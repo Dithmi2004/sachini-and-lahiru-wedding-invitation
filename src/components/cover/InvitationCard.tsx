@@ -35,16 +35,16 @@ export function InvitationCard({ opening, onOpen }: InvitationCardProps) {
 
         <div aria-hidden="true" className="mx-auto mt-4 border-t-2 border-dotted border-rosewood/70" />
 
-        <p className="mt-2 font-script text-[clamp(2.1rem,9.5vw,2.75rem)] leading-tight text-foil">
-          {wedding.bride.name}
+        <p className={`mt-2 text-foil ${locale === "si" ? "font-serif text-[1.55rem] font-semibold leading-relaxed sm:text-[1.75rem]" : "font-script text-[clamp(2.1rem,9.5vw,2.75rem)] leading-tight"}`}>
+          {wedding.bride.fullName[locale]}
         </p>
 
         <p className="my-1 text-lg text-rosewood" aria-hidden="true">
           {t.cover.and}
         </p>
 
-        <p className="mt-2 font-script text-[clamp(2.1rem,9.5vw,2.75rem)] leading-tight text-foil">
-          {wedding.groom.name}
+        <p className={`mt-2 text-foil ${locale === "si" ? "font-serif text-[1.55rem] font-semibold leading-relaxed sm:text-[1.75rem]" : "font-script text-[clamp(2.1rem,9.5vw,2.75rem)] leading-tight"}`}>
+          {wedding.groom.fullName[locale]}
         </p>
 
         <p className="mt-4 text-[19px] font-semibold text-rosewood">{formatWeddingDate(locale)}</p>
