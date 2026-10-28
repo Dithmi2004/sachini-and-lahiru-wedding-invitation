@@ -1,0 +1,102 @@
+/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Great+Vibes&family=Noto+Sans+Sinhala:wght@400;500;600;700&family=Noto+Serif+Sinhala:wght@400;500;600;700&display=swap');
+
+/* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  background-color: #fbf6ec;
+  color: #3b2a1e;
+  font-family: 'Cormorant Garamond', 'Noto Serif Sinhala', Georgia, serif;
+  overflow-x: hidden;
+}
+html[lang='si'] body {
+  font-family: 'Noto Sans Sinhala', 'Noto Serif Sinhala', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+html[lang='si'] h1,
+html[lang='si'] h2,
+html[lang='si'] h3,
+html[lang='si'] .font-serif {
+  font-family: 'Noto Serif Sinhala', serif;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+html[lang='si'] .font-sinhala {
+  font-family: 'Noto Sans Sinhala', 'Noto Serif Sinhala', sans-serif;
+}
+html[lang='si'] .caps {
+  letter-spacing: 0;
+}
+/* Handmade-paper texture (SVG noise, no gradients) */
+.paper {
+  background-color: #fbf6ec;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.45 0 0 0 0 0.35 0 0 0 0 0.2 0 0 0 0.07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+/* Faint scattered gold lotus outlines layered over the paper texture */
+.paper.lotus-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg fill='none' stroke='%23B08D3E' stroke-opacity='0.09' stroke-width='1' stroke-linejoin='round'%3E%3Cg%3E%3Cpath d='M40 56 C34 47 34 36 40 26 C46 36 46 47 40 56Z'/%3E%3Cpath d='M40 56 C32 54 26 47 25 38 C33 40 38 47 40 56Z'/%3E%3Cpath d='M40 56 C48 54 54 47 55 38 C47 40 42 47 40 56Z'/%3E%3Cpath d='M28 60 H52'/%3E%3C/g%3E%3Cg transform='translate(80 80)'%3E%3Cpath d='M40 56 C34 47 34 36 40 26 C46 36 46 47 40 56Z'/%3E%3Cpath d='M40 56 C32 54 26 47 25 38 C33 40 38 47 40 56Z'/%3E%3Cpath d='M40 56 C48 54 54 47 55 38 C47 40 42 47 40 56Z'/%3E%3Cpath d='M28 60 H52'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.45 0 0 0 0 0.35 0 0 0 0 0.2 0 0 0 0.07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+/* Traditional Kandyan-inspired gold band */
+.kandyan-band {
+  background-color: #4e1420;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='14' viewBox='0 0 28 14'%3E%3Cg fill='none' stroke='%23D9C08A' stroke-width='1'%3E%3Cpath d='M14 2 L20 7 L14 12 L8 7 Z'/%3E%3Cpath d='M14 5 L16.5 7 L14 9 L11.5 7 Z' fill='%23D9C08A'/%3E%3C/g%3E%3Ccircle cx='0' cy='7' r='1.4' fill='%23D9C08A'/%3E%3Ccircle cx='28' cy='7' r='1.4' fill='%23D9C08A'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: center;
+  border-top: 1px solid rgba(217, 192, 138, 0.6);
+  border-bottom: 1px solid rgba(217, 192, 138, 0.6);
+}
+/* Letter-spaced capitals for English; Sinhala must not be letter-spaced */
+.caps {
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+}
+html[lang='si'] .caps {
+  letter-spacing: 0;
+}
+/* Italic only for Latin text — Sinhala has no true italic */
+.italic-en {
+  font-style: italic;
+}
+html[lang='si'] .italic-en {
+  font-style: normal;
+}
+.rsvp-button-frame {
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  padding: 2px;
+  border-radius: 9999px;
+}
+.rsvp-button-frame::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(110deg, #A8803A 0%, #F4DDA7 25%, #E7B7BE 50%, #A8803A 75%, #F4DDA7 100%);
+  background-size: 300% 300%;
+  content: '';
+  animation: rsvp-border-shimmer 5s ease-in-out infinite;
+}
+@keyframes rsvp-border-shimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rsvp-button-frame::before { animation: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
