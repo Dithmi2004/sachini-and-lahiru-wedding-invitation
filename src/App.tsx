@@ -6,6 +6,7 @@ import { WeddingPage } from "./components/WeddingPage";
 import { LanguageSwitch } from "./components/ui/LanguageSwitch";
 import { FloatingPetals } from "./components/ui/FloatingPetals";
 import { LotusBloom } from "./components/ui/LotusBloom";
+import { FlowerShower } from "./components/ui/FlowerShower";
 
 interface AppProps {
   /** Skip the tap-to-open cover and land directly on the wedding page. */
@@ -19,6 +20,7 @@ export function App({ startOpened = false, showConfigPlaceholders = true }: AppP
   const [opened, setOpened] = useState(startOpened);
   const [blooming, setBlooming] = useState(false);
   const [celebrate, setCelebrate] = useState(false);
+  const [flowerShower, setFlowerShower] = useState(false);
 
   useEffect(() => {
     setOpened(startOpened);
@@ -47,8 +49,13 @@ export function App({ startOpened = false, showConfigPlaceholders = true }: AppP
     // Mount the invitation immediately so the body is available as soon as
     // the user opens the cover. The bloom remains a short visual transition.
     reveal();
-    if (!reduce) setBlooming(true);
+    if (!reduce) {
+      setBlooming(true);
+      setFlowerShower(true);
+    }
   };
+
+  const finishFlowerShower = useCallback(() => setFlowerShower(false), []);
 
   return (
     <MotionConfig reducedMotion="user">
@@ -57,6 +64,7 @@ export function App({ startOpened = false, showConfigPlaceholders = true }: AppP
           <LanguageSwitch />
           {opened && <WeddingPage showConfigPlaceholders={showConfigPlaceholders} />}
           {celebrate && <FloatingPetals />}
+          {flowerShower && <FlowerShower onComplete={finishFlowerShower} />}
           <AnimatePresence>{!opened && <InvitationCover key="cover" onOpen={handleOpen} />}</AnimatePresence>
           <AnimatePresence>
             {blooming && <LotusBloom key="bloom" onRevealed={reveal} onDone={finishBloom} />}
