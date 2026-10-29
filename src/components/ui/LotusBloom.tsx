@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
+import { useLanguage } from "../../contexts/LanguageContext";
 import { wedding } from "../../data/wedding";
 import { EASE_OUT } from "../../utils/motion";
 

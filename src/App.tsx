@@ -44,11 +44,10 @@ export function App({ startOpened = false, showConfigPlaceholders = true }: AppP
   }, []);
 
   const handleOpen = () => {
-    if (reduce) {
-      reveal();
-      return;
-    }
-    setBlooming(true);
+    // Mount the invitation immediately so the body is available as soon as
+    // the user opens the cover. The bloom remains a short visual transition.
+    reveal();
+    if (!reduce) setBlooming(true);
   };
 
   return (

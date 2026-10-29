@@ -37,6 +37,7 @@ export interface Translation {
   cover: {
     dialogLabel: string;
     blessing: string;
+    coupleImageAlt: string;
     requestDaughter: string;
     requestSon: string;
     and: string;

@@ -60,6 +60,7 @@ export interface WeddingConfig {
   gallery: GalleryPhoto[];
   images: {
     couple: string;
+    coverCouple: string;
     floralBackground: string;
     floralCorner: string;
     coverMandala: string;

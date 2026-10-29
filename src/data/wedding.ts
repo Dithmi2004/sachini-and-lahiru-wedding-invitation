@@ -111,6 +111,7 @@ export const wedding: WeddingConfig = {
 
   images: {
     couple: "/152e4fac-ab78-4f03-ac3a-f90e41307d37.jpg",
+    coverCouple: "/img%207-cutout.png",
     floralBackground: "/eaaa5f72-b033-4fd1-be85-81eaf58b5e8c.jpg",
     floralCorner: "/8525d2f0-e287-4df5-a9b4-dc552590ae02.jpg",
     coverMandala: "/beae6062-c5a3-4772-bd56-aa4345bf65c2.jpg",

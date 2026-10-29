@@ -49,6 +49,14 @@ export function InvitationCard({ opening, onOpen }: InvitationCardProps) {
 
         <p className="mt-4 text-[19px] font-semibold text-rosewood">{formatWeddingDate(locale)}</p>
 
+        <div className="mx-auto mt-3 flex h-[170px] w-full items-center justify-center">
+          <img
+            src={wedding.images.coverCouple}
+            alt={t.cover.coupleImageAlt}
+            className="block h-full max-w-full object-contain drop-shadow-[0_5px_3px_rgba(60,30,20,0.18)]"
+          />
+        </div>
+
         <div className="mt-5">
           <WaxSealButton opening={opening} onOpen={onOpen} label={t.cover.openLabel} hint={t.cover.tapToOpen} />
         </div>
