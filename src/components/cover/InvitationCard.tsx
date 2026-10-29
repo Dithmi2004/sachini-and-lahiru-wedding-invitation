@@ -3,6 +3,7 @@ import { useLanguage } from "../../contexts/LanguageContext";
 import { wedding } from "../../data/wedding";
 import { formatWeddingDate } from "../../utils/datetime";
 import { WaxSealButton } from "./WaxSealButton";
+import { FloralVineDivider } from "../ornaments/FloralVineDivider";
 
 interface InvitationCardProps {
   opening: boolean;
@@ -33,7 +34,7 @@ export function InvitationCard({ opening, onOpen }: InvitationCardProps) {
         <p className="caps text-[10px] font-semibold leading-relaxed text-rosewood/80">{t.cover.blessing}</p>
 
 
-        <div aria-hidden="true" className="mx-auto mt-4 border-t-2 border-dotted border-rosewood/70" />
+        <FloralVineDivider className="mx-auto mt-3 h-7 w-full max-w-[340px]" />
 
         <p className={`mt-2 text-foil ${locale === "si" ? "font-serif text-[1.55rem] font-semibold leading-relaxed sm:text-[1.75rem]" : "font-script text-[clamp(2.1rem,9.5vw,2.75rem)] leading-tight"}`}>
           {wedding.bride.fullName[locale]}

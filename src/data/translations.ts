@@ -15,7 +15,7 @@ const en: Translation = {
   },
   cover: {
     dialogLabel: "Wedding invitation of Sachini and Lahiru",
-    blessing: "With love and blessings from their families",
+    blessing: "Sri Subha Mangalam Bhawathu!!!",
     coupleImageAlt: "Sachini and Lahiru in traditional wedding attire",
     requestDaughter: "Request the pleasure of your company at the wedding of their daughter",
     requestSon: "Request the pleasure of your company at the wedding of their son",
@@ -118,7 +118,7 @@ const si: Translation = {
   },
   cover: {
     dialogLabel: "සචිනි සහ ලහිරුගේ මංගල ආරාධනාව",
-    blessing: "පවුල්වල ආදරය සහ ආශීර්වාදය සමඟ",
+    blessing: "ශ්‍රී සුභ මංගලම් භවතු!!!",
     coupleImageAlt: "සාම්ප්‍රදායික මංගල ඇඳුමින් සැරසී සිටින සචිනි සහ ලහිරු",
     requestDaughter: "තම දියණියගේ විවාහ මංගලෝත්සවයට ඔබගේ පැමිණීම ගෞරවයෙන් අපේක්ෂා කරති",
     requestSon: "තම පුත්‍රයාගේ විවාහ මංගලෝත්සවයට ඔබගේ පැමිණීම ගෞරවයෙන් අපේක්ෂා කරති",

@@ -40,7 +40,7 @@ export function HeroSection() {
         className="pointer-events-none absolute right-0 top-0 w-32 -scale-x-100 mix-blend-multiply sm:w-52 lg:w-72" />
       
 
-      <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-5 pb-20 pt-[clamp(11rem,26vw,16rem)] sm:px-8 md:grid-cols-[1.1fr_1fr] md:gap-10 lg:gap-16 lg:pb-24">
+      <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-5 pb-20 pt-[clamp(14rem,32vw,16rem)] sm:px-8 md:grid-cols-[1.1fr_1fr] md:gap-10 md:pt-[clamp(11rem,26vw,16rem)] lg:gap-16 lg:pb-24">
         <motion.div
           className="text-center"
           initial={{ opacity: 0, y: 16 }}
